@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{83BB9EE4-332D-4CF2-B0EF-F44A4647AC82}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>CustomPermissions</RootNamespace>
+        <AssemblyName>CustomPermissions</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+      <Reference Include="0Harmony, Version=2.0.4.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Downloads\Exiled (1)\EXILED\Plugins\dependencies\0Harmony.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\EXILED 4.1.7\Assembly-CSharp-Publicized.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Steam Biblioteca\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      </Reference>
+      <Reference Include="CommandSystem.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Steam Biblioteca\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\CommandSystem.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="Exiled.API, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Downloads\Exiled (1)\EXILED\Plugins\dependencies\Exiled.API.dll</HintPath>
+      </Reference>
+      <Reference Include="Exiled.Events, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Downloads\Exiled (1)\EXILED\Plugins\Exiled.Events.dll</HintPath>
+      </Reference>
+      <Reference Include="Exiled.Loader, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Downloads\Exiled (1)\EXILED\Exiled.Loader.dll</HintPath>
+      </Reference>
+      <Reference Include="Exiled.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Downloads\Exiled (1)\EXILED\Plugins\Exiled.Permissions.dll</HintPath>
+      </Reference>
+      <Reference Include="Mirror, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Steam Biblioteca\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\Mirror.dll</HintPath>
+      </Reference>
+      <Reference Include="NorthwoodLib, Version=1.2.1.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Steam Biblioteca\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\NorthwoodLib.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Steam Biblioteca\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Steam Biblioteca\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Include="Config.cs" />
+      <Compile Include="ExiledPermissionsPatch.cs" />
+      <Compile Include="Plugin.cs" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>
